@@ -1,0 +1,108 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.GridLayout ) {
+			"rows": 3
+			"columns": 3
+		} ) {
+			name: "this"
+			"$sizePolicy": 1
+			"background": new java.awt.Color( 102, 102, 102, 255 )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				"maximumSize": new java.awt.Dimension( 2000, 32767 )
+				"preferredSize": new java.awt.Dimension( 205, 87 )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "input_area"
+					"background": new java.awt.Color( 255, 255, 255, 255 )
+					"rows": 5
+					"preferredSize": new java.awt.Dimension( 103, 85 )
+					"toolTipText": "（最多100字）\n"
+					"text": "请输入想要转译的文字（最多100字）"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"columns": 2
+				"rows": 2
+			} ) {
+				name: "panel1"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel2"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "语速："
+						"verticalAlignment": 1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "speed"
+						"background": &Color0 new java.awt.Color( 255, 255, 255, 255 )
+						"columns": 5
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel3"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "音量："
+						"verticalAlignment": 1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "volume"
+						"background": #Color0
+						"columns": 5
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel4"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "主播模式："
+						"verticalAlignment": 1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "archor"
+						"background": #Color0
+						"columns": 5
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel5"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "音调："
+						"verticalAlignment": 1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tone"
+						"background": #Color0
+						"columns": 5
+					} )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+				"rows": 3
+			} ) {
+				name: "panel6"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel13"
+					"visible": false
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+					name: "panel12"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "submit"
+						"text": "转译"
+						"background": new javax.swing.plaf.ColorUIResource( 238, 238, 238 )
+						"horizontalTextPosition": 0
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "submitMouseClicked", true ) )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 160, 40 )
+			"size": new java.awt.Dimension( 385, 475 )
+		} )
+	}
+}
